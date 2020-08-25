@@ -12,6 +12,7 @@ app.get('/jobs', async(req, res) => {
 
     const jobs = await getAsync('github');
     res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.header("Access-Control-Allow-Origin", "https://job-searcher.netlify.app/");
 
     return res.send(jobs);
 })

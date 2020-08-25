@@ -7,5 +7,5 @@ const fetchGithub = require('./tasks/fetch-github');
 //
 
 //Starts the cron job
-var job = new CronJob(' * * * * *', fetchGithub, null, true, 'Europe/Madrid');
+var job = new CronJob(' */5 * * * *', fetchGithub, null, true, 'Europe/Madrid');
 job.start();
