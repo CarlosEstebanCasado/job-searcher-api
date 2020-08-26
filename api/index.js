@@ -11,7 +11,7 @@ const getAsync = promisify(client.get).bind(client);
 app.get('/jobs', async(req, res) => {
 
     const jobs = await getAsync('github');
-    res.header("Access-Control-Allow-Origin", "https://job-searcher.netlify.app/");
+    res.header("Access-Control-Allow-Origin", "*");
     return res.send(jobs);
 })
 
